@@ -21,6 +21,9 @@ public class SessionSpecification implements Specification<Session> {
     @Override
     public Predicate toPredicate(Root<Session> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
         Predicate p = criteriaBuilder.conjunction();
+
+        p.getExpressions().add(criteriaBuilder.greaterThanOrEqualTo(root.get("availableCapacity"), 5));
+
         if (!CollectionUtils.isEmpty(subscriber.getPincodes())) {
             p.getExpressions()
                     .add(root.get("pincode").in(subscriber.getPincodes()));
