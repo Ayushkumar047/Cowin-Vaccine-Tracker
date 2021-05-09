@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.public</groupId>
-	<artifactId>cowin-tracker</artifactId>
+	<artifactId>cowin-vaccine-tracker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cowin-tracker</name>
 	<description>An application to track the vaccination availability.</description>
@@ -89,14 +89,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
